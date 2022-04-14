@@ -63,6 +63,8 @@ if st.button('Вычислить..'):
     )
 
 
-    ax = df.plot.pie(y='стоимость', figsize=(3,3))
+    ax = df.plot.pie(y='стоимость', figsize=(3,5),
+        autopct='%1.1f%%', shadow=True, startangle=0
+    )
     st.pyplot(ax.get_figure())
 
