@@ -63,8 +63,13 @@ if st.button('Вычислить..'):
     )
 
 
-    ax = df.plot.pie(y='стоимость', figsize=(3,5),
-        autopct='%1.1f%%', shadow=True, startangle=0
+    ax = df.plot.pie(
+        y='стоимость',
+        figsize=(3,5),
+        explode = (0.1, 0),
+        autopct='%1.1f%%',
+        shadow=True,
+        startangle=0
     )
     st.pyplot(ax.get_figure())
 
