@@ -1,5 +1,4 @@
-import math
-import pandas as pd
+
 import streamlit as st
 
 st.title('Расчет ущерба от пожара')
