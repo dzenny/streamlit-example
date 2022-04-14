@@ -1,38 +1,57 @@
-from collections import namedtuple
-import altair as alt
 import math
 import pandas as pd
 import streamlit as st
 
-"""
-# Welcome to Streamlit!
+st.title('Расчет ущерба от пожара')
+#st.subheader('Расчет ущерба')
 
-Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:
+costs = {
+    "Соя": 3.42,
+    "Рапс": 3.46,
+    "Рожь":  1.26,
+    "Овес": 1.23,
+    "Просо": 1.12,
+    "Ячмень":   2.58,
+    "Гречиха": 1.84,
+    "Пшеница": 2.53,
+    "Кукуруза": 4.36,
+    "Зернобобовые": 2.37,
+    "Подсолнечник": 3.09,
+    "Однолетние травы": 0.73,
+    "Многолетние травы": 0.87,
+    "Лен - долгунец (волокно)": 2.61,
+    "Прочие зерновые и зернобобовые": 2.47,
+    "Прочие технические культуры (плодово-ягодные, овощно¬бахчевые и др.)": 66.81,
+}
 
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
 
-In the meantime, below is an example of what you can do with just a few lines of code:
-"""
+plant = st.selectbox(
+    'Пострадала сельхоз культура',
+    costs.keys()
+)
+
+st.write(f'Цена за 1 кв.м (руб): {costs.get(plant, "неизвестно")}')
+
+st.write('Введите:')
+total_area      = st.number_input('Общую площадь i-х сельскохозяйственных посевов (лесного насаждения), кв.м.')
+destroyed_area  = st.number_input('Общую уничтоженную пожаром площадь г-х сельскохозяйственных посевов (лесного насаждения), кв.м.')
+total_cost      = st.number_input('Общую стоимость i-х сельскохозяйственных посевов (лесного насаждения), руб.')
 
 
-with st.echo(code_location='below'):
-    total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
-    num_turns = st.slider("Number of turns in spiral", 1, 100, 9)
 
-    Point = namedtuple('Point', 'x y')
-    data = []
+def get_cost():
+    price = costs.get(plant, 'неизвестно') 
+    if price == 'неизвестно':
+        res = (total_cost/total_area)*destroyed_area
+    else:	
+        res = price*destroyed_area
+    return res
 
-    points_per_turn = total_points / num_turns
+st.subheader('Результат:')
+ 
+st.write(f'Общая площадь: {total_area} кв.м.')
+st.write(f'Уничтожено: {destroyed_area} кв.м.')
+st.write(f'Сельхоз. культура: {plant} (цена за 1 кв.м: {costs.get(plant,"неизвестно")})')
+st.write(f'Ущерб: {get_cost()} руб.')
 
-    for curr_point_num in range(total_points):
-        curr_turn, i = divmod(curr_point_num, points_per_turn)
-        angle = (curr_turn + 1) * 2 * math.pi * i / points_per_turn
-        radius = curr_point_num / total_points
-        x = radius * math.cos(angle)
-        y = radius * math.sin(angle)
-        data.append(Point(x, y))
 
-    st.altair_chart(alt.Chart(pd.DataFrame(data), height=500, width=500)
-        .mark_circle(color='#0068c9', opacity=0.5)
-        .encode(x='x:Q', y='y:Q'))
