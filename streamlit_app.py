@@ -51,6 +51,6 @@ st.subheader('Результат:')
 st.write(f'Общая площадь: {total_area} кв.м.')
 st.write(f'Уничтожено: {destroyed_area} кв.м.')
 st.write(f'Сельхоз. культура: {plant} (цена за 1 кв.м: {costs.get(plant,"неизвестно")})')
-st.write(f'Ущерб: {get_cost()} руб.')
+st.write(f'Ущерб: {get_cost():.2f} руб.')
 
 
