@@ -2,6 +2,8 @@ import streamlit as st
 import openpyxl  as op
 import math
 
+st.image('SPSA.png')
+
 def Y1():
     st.title('ущерб нанесённый пожаром объектам строительства, руб.')
     Number = int(st.number_input("Введите число объектов строительства на которых пожаром была поврежденна или уничтоженна их площадь "))
@@ -1149,3 +1151,4 @@ damage = sum(list_price)
 if st.button('Вычислить..'):
     st.subheader('Результат:')
     st.write(damage)
+st.image('SPSA2.png')   
