@@ -295,7 +295,7 @@ def Y1():
             vibor = vibor_fact_group.get(viborka)
 
             def danna_kap():
-                vbrn_kap= int(st.number_input('введите фактичсекую капитальность объекта', key=str(klfg)+'55'))
+                vbrn_kap= int(st.number_input('введите фактическую капитальность объекта', key=str(klfg)+'55'))
                 vibor_dann = {
                         'Объекты общественного и жилого назначения и элементов приусадебного хозяйства': 0,
                         'объекты строительства производственного назначения': 1,
