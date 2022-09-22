@@ -29,7 +29,7 @@ def Y1():
 
             institution = st.selectbox(
                 'Тип объекта',
-                vc2, key=str(klfg)+'55'
+                vc2, key=str(klfg)+'85855'
             )
 
 
@@ -53,7 +53,7 @@ def Y1():
 
             vids_avto = st.selectbox(
                 'наименование территории субъекта рф',
-                dict_pril_L1, key=str(klfg)+'55'
+                dict_pril_L1, key=str(klfg)+'54675'
             )
             for x,m in enumerate(range(1,status_file.max_row +1)):
                 if vids_avto == status_file[m][0].value:
@@ -108,7 +108,7 @@ def Y1():
                 }
                 txt_a = st.selectbox(
                 'Выберите тип объекта, значение эксплуатационного параметра которого вы ввели',
-                tabl_pril_a.keys(), key=str(klfg)+'55'
+                tabl_pril_a.keys(), key=str(klfg)+'53565555'
                 )
                 vibor_a = tabl_pril_a.get(txt_a)
 
@@ -121,7 +121,7 @@ def Y1():
                         
                 price_in_pril = st.selectbox(
                     'Здания и учреждения',
-                    vc_c1, key=str(klfg)+'55'
+                    vc_c1, key=str(klfg)+'56534655'
                 )
                 for r,n in enumerate(range(1,staf.max_row +1)):
                     if price_in_pril == staf[n][0].value:
@@ -159,7 +159,7 @@ def Y1():
                 }
                 txt_c = st.selectbox(
                 'Выберите тип объекта, значение эксплуатационного параметра которого вы ввели',
-                tabl_pril_c.keys(), key=str(klfg)+'55'
+                tabl_pril_c.keys(), key=str(klfg)+'56747435'
                 )
                 vibor_c = tabl_pril_c.get(txt_c)
                 book_c = op.open(f'А{vibor_c}.xlsx', read_only=True)
@@ -170,7 +170,7 @@ def Y1():
                     vc_c2[price_c] = j
                 price_in_pril_c = st.selectbox(
                     'Объекты',
-                    vc_c2, key=str(klfg)+'55'
+                    vc_c2, key=str(klfg)+'589567857855'
                 )
                 for o,p in enumerate(range(1,stafc.max_row +1)):
                     if price_in_pril_c == stafc[p][0].value:
@@ -182,16 +182,16 @@ def Y1():
             st.write('но, наиболее приближенный к вашему, меньше данного значения.')
             st.write('Если ваше значение меньше, чем данные в списке,')
             st.write('то выберите наименьший параметр из предложенных и запишите его значение.')
-            a = st.number_input('значение эксплуатационного параметра (меньший)', key=str(klfg)+'55')
+            a = st.number_input('значение эксплуатационного параметра (меньший)', key=str(klfg)+'5090905')
             C_a = first_a()
             st.write('Выберите значения эксплуатационного параметра, того же функционального назначения,')
             st.write('но ,наиболее приближенный к вашему,большего данного значения')
             st.write('Если ваше значение больше, чем данные в списке,')
             st.write('то выберите наибольший параметр из предложенных.')
-            c = st.number_input('значение эксплуатационного параметра (больший)', key=str(klfg)+'55')
+            c = st.number_input('значение эксплуатационного параметра (больший)', key=str(klfg)+'5800795')
             C_c = first_c()
             st.write('Теперь введите фактическое значение эксплуатационного параметра')
-            b = st.number_input('Теперь введите фактическое значение эксплуатационного параметра', key=str(klfg)+'55')
+            b = st.number_input('Теперь введите фактическое значение эксплуатационного параметра', key=str(klfg)+'547546455')
 
 
 
@@ -239,7 +239,7 @@ def Y1():
                 
                 txt_A = st.selectbox(
                     'Выберите тип объекта, цену которого следует определить',
-                    tabl_pril_A.keys(), key=str(klfg)+'55' 
+                    tabl_pril_A.keys(), key=str(klfg)+'548585795' 
                 )
                 st.write('Если присутствуют сведения о виде i-го объекта строительства,')
                 st.write('но имеющего другие значения эксплуатационного параметра, выберите пункт "другое"')
@@ -257,7 +257,7 @@ def Y1():
 
                     sub_russia = st.selectbox(
                         'Объекты',
-                        vc, key=str(klfg)+'55'
+                        vc, key=str(klfg)+'585877585'
                     )
                     for d,q in enumerate(range(1,staff.max_row +1)):
                         if sub_russia == staff[q][0].value:
@@ -274,7 +274,7 @@ def Y1():
             }
             viborka_price =  st.selectbox(
                 'восстановительная стоимость 1 кв.м i-го объекта строительства, руб./кв.м.',
-                vibor_price.keys(), key=str(klfg)+'55'
+                vibor_price.keys(), key=str(klfg)+'555555'
             )
             vibor_ = vibor_price.get(viborka_price)
             if vibor_ == 0:
@@ -290,12 +290,12 @@ def Y1():
             }
             viborka = st.selectbox(
                         'фактичсекая капитальность объекта',
-                        vibor_fact_group.keys(), key=str(klfg)+'55'
+                        vibor_fact_group.keys(), key=str(klfg)+'5432542555'
                     )
             vibor = vibor_fact_group.get(viborka)
 
             def danna_kap():
-                vbrn_kap= int(st.number_input('введите фактическую капитальность объекта', key=str(klfg)+'55'))
+                vbrn_kap= int(st.number_input('введите фактическую капитальность объекта', key=str(klfg)+'5565363265'))
                 vibor_dann = {
                         'Объекты общественного и жилого назначения и элементов приусадебного хозяйства': 0,
                         'объекты строительства производственного назначения': 1,
@@ -303,7 +303,7 @@ def Y1():
 
                 vibor_dannogo = st.selectbox(
                     'Выберите тип объекта из списка ниже',
-                    vibor_dann.keys(), key=str(klfg)+'55'
+                    vibor_dann.keys(), key=str(klfg)+'53632655'
                 )
 
                 viberi_dannoe = vibor_dann.get(vibor_dannogo)
@@ -318,7 +318,7 @@ def Y1():
 
                     sub_russia = st.selectbox(
                         'Объект строительства',
-                        vc, key=str(klfg)+'55'
+                        vc, key=str(klfg)+'5262365'
                     )
                                 
                     for d,q in enumerate(range(1,staff.max_row +1)):
@@ -336,7 +336,7 @@ def Y1():
 
                     sub_russia = st.selectbox(
                         'Объект строительства',
-                        vc, key=str(klfg)+'55'
+                        vc, key=str(klfg)+'572365'
                     )
                                 
                     for d,q in enumerate(range(1,staff.max_row +1)):
@@ -353,7 +353,7 @@ def Y1():
 
                 vibor_tipa = st.selectbox(
                     'Определяемая фактичсекая капитальность объекта',
-                    vibor_kap_v.keys(), key=str(klfg)+'55'
+                    vibor_kap_v.keys(), key=str(klfg)+'5225'
                 )
 
                 viberi_group = vibor_kap_v.get(vibor_tipa)
@@ -369,7 +369,7 @@ def Y1():
                     }
                     viborka_kap_v1 = st.selectbox(
                         'Фактические группы капитальности объектов строительства, определяемые по конструктивным элементам ',
-                        vibor_kap_v1.keys(), key=str(klfg)+'55'
+                        vibor_kap_v1.keys(), key=str(klfg)+'54445'
                     )
 
                     vibor_v_1 = vibor_kap_v1.get(viborka_kap_v1)
@@ -383,7 +383,7 @@ def Y1():
 
                     sub_russia = st.selectbox(
                         'Объект строительства',
-                        vc, key=str(klfg)+'55'
+                        vc, key=str(klfg)+'5666665'
                     )
                         
                     for d,q in enumerate(range(1,staff.max_row +1)):
@@ -403,7 +403,7 @@ def Y1():
                     }
                     viborka_kap_v2 = st.selectbox(
                         'Фактические группы капитальности объектов строительства, определяемые по конструктивным элементам ',
-                        vibor_kap_v2.keys(), key=str(klfg)+'55'
+                        vibor_kap_v2.keys(), key=str(klfg)+'5777775'
                     )
 
                     vibor_v_2 = vibor_kap_v2.get(viborka_kap_v2)
@@ -417,7 +417,7 @@ def Y1():
 
                     sub_russia = st.selectbox(
                         'Объект строительства',
-                        vc, key=str(klfg)+'55'
+                        vc, key=str(klfg)+'5888885'
                     )
                         
                     for d,q in enumerate(range(1,staff.max_row +1)):
@@ -475,7 +475,7 @@ def Y1():
             st.write('Если в предложенном списке отсутствуют сведения об объектах того же функционального назначения, то выберите "Отсутствуют сведения об объектах того же функционального назначения" ')
             txt_A = st.selectbox(
                 'Выберите тип объекта, для определения нормативной капитальности',
-                tabl_pril_A.keys(), key=str(klfg)+'55' 
+                tabl_pril_A.keys(), key=str(klfg)+'599995' 
             )
 
             vibor_A = tabl_pril_A.get(txt_A)
@@ -491,7 +491,7 @@ def Y1():
 
                 sub_russia = st.selectbox(
                     'Тип объекта данного субъекта',
-                    vc, key=str(klfg)+'55'
+                    vc, key=str(klfg)+'595'
                 )
                 for d,q in enumerate(range(1,staff.max_row +1)):
                     if sub_russia == staff[q][0].value:
@@ -501,9 +501,9 @@ def Y1():
 
             return A
         def for_y5():
-            N2 = int(st.number_input('Введите последний год из числа лет, предшествующих году, в который произошел пожар', key=str(klfg)+'55'))
+            N2 = int(st.number_input('Введите последний год из числа лет, предшествующих году, в который произошел пожар', key=str(klfg)+'5000005'))
             C3 = st.number_input('Введите кадастровую стоимость объекта строительства', key=str(klfg)+'55')
-            N1 = int(st.number_input('Введите год, в котором была произведенна оценка стоимости объекта строительства', key=str(klfg)+'55'))
+            N1 = int(st.number_input('Введите год, в котором была произведенна оценка стоимости объекта строительства', key=str(klfg)+'5089775'))
             j_pril = op.open('Ж.xlsx', read_only=True)
             activate = j_pril.active
 
@@ -537,7 +537,7 @@ def Y1():
         asas = klfg + 1
         st.subheader(f'Рассчёт ущерба на {asas} объекте')
         st.subheader('Введите Фактический срок службы i-го объекта в годах')
-        T_Fi = st.number_input('Фактический срок службы i-го объекта в годах', key=str(klfg)+'55')
+        T_Fi = st.number_input('Фактический срок службы i-го объекта в годах', key=str(klfg)+'57565675')
         st.write('Примечание.Если на объекте строительства была проведена реконструкция (модернизация),')
         st.write('то фактический срок службы исчисляется, начиная с даты завершения реконструкции (модернизации).')
 
@@ -570,13 +570,13 @@ def Y1():
         }
         tabl_viborki_3_4 = st.selectbox(
             ' ',
-            vibor_pov_im.keys(), key=str(klfg)+'55'
+            vibor_pov_im.keys(), key=str(klfg)+'5554477885'
         )
         vibral = vibor_pov_im.get(tabl_viborki_3_4)
 
         if vibral == 2:
             if GK == 10:
-                S2 = st.number_input('Общая площадь объекта строительства', key=str(klfg)+'55')
+                S2 = st.number_input('Общая площадь объекта строительства', key=str(klfg)+'544553377775')
                 C2 = for_y5()
                 y5 = C2/S2     
             else:
@@ -594,7 +594,7 @@ def Y1():
                 C1 = c1_pril()
 
                 y5 = C1*(1-(k1/100))*k2*k3*k4
-            S1 =st.number_input('Введите уничтоженную пожаром площадь i-го объекта строительства кв. м.', key=str(klfg)+'55')
+            S1 =st.number_input('Введите уничтоженную пожаром площадь i-го объекта строительства кв. м.', key=str(klfg)+'584674745')
             y3 = y5*S1
         else:
             tabl_i = st.selectbox(
@@ -603,7 +603,7 @@ def Y1():
             )
             K6 = pril_i.get(tabl_i)
             if GK == 10:
-                S2 = st.number_input('Общая площадь объекта строительства', key=str(klfg)+'55')
+                S2 = st.number_input('Общая площадь объекта строительства', key=str(klfg)+'547678885')
                 C2 = for_y5()
                 y5 = (C2/S2)*K6     
             else:
@@ -621,7 +621,7 @@ def Y1():
                 C1 = c1_pril()
 
                 y5 = C1*k2*k3*k4*K6
-            S3 =st.number_input('Введите повреждённую пожаром площадь i-го объекта строительства кв. м.', key=str(klfg)+'55')
+            S3 =st.number_input('Введите повреждённую пожаром площадь i-го объекта строительства кв. м.', key=str(klfg)+'534534333335')
             y3 = y5*S3
         return y3
 
@@ -669,7 +669,7 @@ def y13():
         st.write('В случае, если отсутствует уничтоженная пожаром площадь i-го объекта строительства, то приравнивается к площади пожара.')
         pov_im = st.selectbox(
             'Тип повреждённого имущества на объекте строительства',
-            k_pov.keys(), key=str(w)+'87'
+            k_pov.keys(), key=str(w)+'387'
         )
 
         s3 = st.number_input('введите поврежденную пожаром площадь i-го объекта строительства, кв.м. определяемую в соответствии с Порядком заполнения и представления КУП', key=str(w)+'87')   
@@ -678,7 +678,7 @@ def y13():
         y25 = k_pov.get(pov_im)
 
         if y16 == 0:
-            c13 = st.number_input('введите общую стоимость имущества, находившегося на момент пожара на i-м объекте строительства, руб.', key=str(w)+'87')
+            c13 = st.number_input('введите общую стоимость имущества, находившегося на момент пожара на i-м объекте строительства, руб.', key=str(w)+'8457')
             s2 = st.number_input('введите общую площадь i-го объекта строительства, кв.м. определяемую в соответствии с Порядком заполнения и представления КУП', key=str(w)+'87')       
             y14 = (c13/s2)*s1
             
@@ -686,7 +686,7 @@ def y13():
             y14 = y16*s1
         if y25 == 0:
             c131 = st.number_input('введите общую стоимость имущества, находившегося на момент пожара на i-м объекте строительства, руб.', key=str(w)+'877')
-            s2232 = st.number_input('введите общую площадь i-го объекта строительства, кв.м. определяемую в соответствии с Порядком заполнения и представления КУП', key=str(w)+'877')
+            s2232 = st.number_input('введите общую площадь i-го объекта строительства, кв.м. определяемую в соответствии с Порядком заполнения и представления КУП', key=str(w)+'84477')
             y15 = (0.75*(c131/s2232))*s1
             
         else:
@@ -842,7 +842,7 @@ def y26():
 
             sqq_ts = st.selectbox(
                 'Повреждённая площадь от горения транспортного средства, кв.м',
-                dict_pril_p, key=str(kraft)+'44'
+                dict_pril_p, key=str(kraft)+'44354'
             )
 
             for fss, krek in enumerate(range(kk,gg)):
@@ -857,7 +857,7 @@ def y26():
 
             sqq_ts2 = st.selectbox(
                 'Площадь транспортного средства, кв.м',
-                dict_prilp, key=str(kraft)+'44'
+                dict_prilp, key=str(kraft)+'42525254'
             )
             for qwe, rty in enumerate(range(1,wp)):
                 if sqq_ts2 == opendd[kk-1][rty].value:
@@ -878,7 +878,7 @@ def y26():
             dict_pril_L1[vid_avto] = z
         vids_avto = st.selectbox(
             'вид т/с ',
-            dict_pril_L1, key=str(kraft)+'44'
+            dict_pril_L1, key=str(kraft)+'22244'
         )
         dict_pril_L2 = dict()
         for hj,fg in enumerate(range(1,status_file.max_column)):
@@ -886,7 +886,7 @@ def y26():
             dict_pril_L2[otech_imp] = hj
         vids_avto_2 = st.selectbox(
             'разновидности моделей т/с ',
-            dict_pril_L2, key=str(kraft)+'44'
+            dict_pril_L2, key=str(kraft)+'76544'
         )
         for x,m in enumerate(range(2,status_file.max_row +1)):
             if vids_avto == status_file[m][0].value:
@@ -896,27 +896,27 @@ def y26():
                 hex = y
         M_kf = st.selectbox(
             'срок эксплуатациитранспортного средства на момент пожара',
-            M1.keys(), key=str(kraft)+'44'
+            M1.keys(), key=str(kraft)+'43664'
         )
         sub_russia = st.selectbox(
             'Субъекты рф',
-            vc, key=str(kraft)+'44'
+            vc, key=str(kraft)+'252544'
         )
         for d,q in enumerate(range(1,staff.max_row +1)):
             if sub_russia == staff[q][0].value:
                 liine = q
         N_kf = st.selectbox(
             'вид транспортного средства',
-            N1.keys(), key=str(kraft)+'44'
+            N1.keys(), key=str(kraft)+'484574'
         )
         spisok_vida = st.selectbox(
             'вид т/с для расчёта',
-            P_raschet.keys(), key=str(kraft)+'44'
+            P_raschet.keys(), key=str(kraft)+'44684584'
         )
         first_step_kf = P_raschet.get(spisok_vida)
-        s14 = st.number_input('введите общую площадь i-го транспортного средства в кв. м.', key=str(kraft)+'44')
-        s4 = st.number_input('введите уничтоженную в результате горения площадь i-го т/с. в кв. м.', key=str(kraft)+'44')
-        s5 = st.number_input('введите повреждённую в результате горения площадь i-го т/с. в кв. м.', key=str(kraft)+'44')
+        s14 = st.number_input('введите общую площадь i-го транспортного средства в кв. м.', key=str(kraft)+'443544544')
+        s4 = st.number_input('введите уничтоженную в результате горения площадь i-го т/с. в кв. м.', key=str(kraft)+'42454554')
+        s5 = st.number_input('введите повреждённую в результате горения площадь i-го т/с. в кв. м.', key=str(kraft)+'46786794')
 
         N_vibor = N1.get(N_kf)
         if N_vibor == 0:
@@ -974,10 +974,10 @@ def y9_summa():
     def input_data(i):
         g = i+1
         st.write(f'ущерб, нанесенный {g} имуществу на транспортных средствах')
-        s7 = st.number_input("введите общую площадь имущества, находившегося на момент пожара на г-м транспортном средстве, кв.м.", key=str(i)+'1')
-        c7 =  st.number_input("введите общую стоимость имущества, находившегося на момент пожара на г-м транспортном средстве, руб.", key=str(i)+'1')
-        s6 =  st.number_input("введите площадь уничтоженного имущества на г-м транспортном средстве, кв.м.", key=str(i)+'1')
-        s8 =  st.number_input("введите площадь поврежденного имущества на г-м транспортном средстве, кв.м.", key=str(i)+'1')
+        s7 = st.number_input("введите общую площадь имущества, находившегося на момент пожара на г-м транспортном средстве, кв.м.", key=str(i)+'12')
+        c7 =  st.number_input("введите общую стоимость имущества, находившегося на момент пожара на г-м транспортном средстве, руб.", key=str(i)+'13')
+        s6 =  st.number_input("введите площадь уничтоженного имущества на г-м транспортном средстве, кв.м.", key=str(i)+'14')
+        s8 =  st.number_input("введите площадь поврежденного имущества на г-м транспортном средстве, кв.м.", key=str(i)+'15')
 
         def y17():
             c6 = c7/s7
@@ -1023,12 +1023,12 @@ def y10():
         }
         plant = st.selectbox(
             'Пострадала сельхозяйственная культура',
-            costs.keys(), key=str(r)+'77'
+            costs.keys(), key=str(r)+'71347'
         )
         st.write('Введите:')
-        total_area = st.number_input('Общую площадь i-х сельскохозяйственных посевов (лесного насаждения), кв.м.', key=str(r)+'77')
-        destroyed_area = st.number_input('Общую уничтоженную пожаром площадь г-х сельскохозяйственных посевов (лесного насаждения), кв.м.', key=str(r)+'77')
-        total_cost = st.number_input('Общую стоимость i-х сельскохозяйственных посевов (лесного насаждения), руб.', key=str(r)+'77')
+        total_area = st.number_input('Общую площадь i-х сельскохозяйственных посевов (лесного насаждения), кв.м.', key=str(r)+'76347')
+        destroyed_area = st.number_input('Общую уничтоженную пожаром площадь г-х сельскохозяйственных посевов (лесного насаждения), кв.м.', key=str(r)+'7356367')
+        total_cost = st.number_input('Общую стоимость i-х сельскохозяйственных посевов (лесного насаждения), руб.', key=str(r)+'363677')
 
         price = costs.get(plant) 
 
@@ -1051,10 +1051,10 @@ def y21():
     def y21_1(e):
         f = e +1 
         st.write(f'Рассчёт ущерба нанесенный {f} имуществу на открытой территории')
-        s12 = st.number_input("введите общую площадь имущества i-го вида на открытой территории, кв.м", key=str(e)+'88')
-        c11 = st.number_input("введите общую стоимость имущества i-го вида на открытой территории, руб.", key=str(e)+'88')
-        s11 = st.number_input("введите площадь уничтоженного имущества i-го вида на открытой территории, кв.м.", key=str(e)+'88')
-        s13 = st.number_input("введите площадь поврежденного имущества i-го вида на открытой территории, кв.м.", key=str(e)+'88')
+        s12 = st.number_input("введите общую площадь имущества i-го вида на открытой территории, кв.м", key=str(e)+'8258')
+        c11 = st.number_input("введите общую стоимость имущества i-го вида на открытой территории, руб.", key=str(e)+'25588')
+        s11 = st.number_input("введите площадь уничтоженного имущества i-го вида на открытой территории, кв.м.", key=str(e)+'823558')
+        s13 = st.number_input("введите площадь поврежденного имущества i-го вида на открытой территории, кв.м.", key=str(e)+'823523568')
         c10 = c11/s12
         y22 = (c10*s11)
         y23 = (0.75*c10*s13)
@@ -1104,9 +1104,9 @@ def y12():
         } 
         animal = st.selectbox(
             'Выберите животное',
-            price_animals_list.keys(),key=str(q)+'100'
+            price_animals_list.keys(),key=str(q)+'133300'
         )
-        number_animals =st.number_input('количество животных данного вида',key=str(q)+'100')
+        number_animals =st.number_input('количество животных данного вида',key=str(q)+'10022')
 
         price_animal = price_animals_list.get(animal)
         res_animal = price_animal*number_animals
