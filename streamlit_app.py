@@ -19,7 +19,7 @@ def Y1():
 
             sub_russia = st.selectbox(
                 'Субъекты рф',
-                vc, key=str(klfg)+'55'
+                vc, key=str(klfg)+'53435'
             )
             vc2 = dict()
 
