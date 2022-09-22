@@ -70,7 +70,7 @@ def Y1():
 
             vids_avto = st.selectbox(
                 'вид постройки',
-                dict_pril_L1, key=str(klfg)+'55'
+                dict_pril_L1, key=str(klfg)+'545'
             )
             for x,m in enumerate(range(1,status_file.max_row +1)):
                 if vids_avto == status_file[m][0].value:
