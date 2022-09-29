@@ -790,7 +790,7 @@ def y26():
 
             sqq_ts_2 = st.selectbox(
                 'Площадь транспортного средства, кв.м',
-                dict_pril_p_2, key=str(kraft)+'44'
+                dict_pril_p_2, key=str(kraft)+'4554554'
             )
             for qwe, rty in enumerate(range(1,wp)):
                 if sqq_ts_2 == opendd[kk-1][rty].value:
